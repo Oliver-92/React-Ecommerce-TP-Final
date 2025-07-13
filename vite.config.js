@@ -3,19 +3,18 @@ import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  plugins: [
-    react(),
-    tailwindcss(),
-  ],
+  plugins: [react(), tailwindcss()],
   build: {
+    chunkSizeWarningLimit: 600,
     rollupOptions: {
       output: {
         manualChunks: {
+          // Divide librerías pesadas en archivos separados
           react: ['react', 'react-dom'],
-          icons: ['bootstrap-icons'],
-          // Otras librerías pesadas que uses, como chart.js, axios, etc.
-        }
-      }
-    }
-  }
+          router: ['react-router-dom'],
+          framer: ['framer-motion'],
+        },
+      },
+    },
+  },
 });

@@ -33,8 +33,9 @@ const Footer = () => (
     </div>
 
     {/* Footer final */}
-    <div className="bg-gray-950 text-white text-center py-4">
+    <div className="flex flex-col sm:flex-row justify-center gap-2 bg-gray-950 text-white text-center py-4">
       <p className="text-xs md:text-sm">© 2025 MiTienda. Todos los derechos reservados.</p>
+      <p className="text-xs md:text-sm">Desarrollado por <a href="https://oliver-92.github.io/Portafolio/" className="font-semibold" target="_blank" rel="noopener noreferrer">Ezequiel Oliver</a></p>
     </div>
   </footer>
 );
