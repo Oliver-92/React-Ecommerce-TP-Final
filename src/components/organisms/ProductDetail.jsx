@@ -3,9 +3,10 @@ import { useProductsContext } from "../../contexts/ProductsContext";
 import { useEffect, useState } from "react";
 import ProductDetailCard from "../organisms/cards/ProductDetailCard";
 import LoadingSpinner from "../atoms/LoadingSpinner";
+// ProductDetail: Organismo que muestra el detalle completo de un producto.
 
 const ProductDetail = () => {
-  const { id } = useParams(); // <- ID de la URL
+  const { id } = useParams();
   const { selectedProduct, fetchProductById } = useProductsContext();
   const [cargando, setCargando] = useState(true);
   const [error, setError] = useState(null);
@@ -13,14 +14,13 @@ const ProductDetail = () => {
   useEffect(() => {
     const loadProduct = async () => {
       try {
-        await fetchProductById(id); // <- PASAMOS ID
+        await fetchProductById(id);
       } catch (err) {
         setError("Hubo un problema al cargar el producto.");
       } finally {
         setCargando(false);
       }
     };
-
     loadProduct();
   }, [id]);
 

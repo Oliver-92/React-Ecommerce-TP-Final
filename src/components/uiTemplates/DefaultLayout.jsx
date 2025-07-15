@@ -1,5 +1,6 @@
 import Header from '../organisms/Header';
 import Footer from '../organisms/Footer';
+// import { Outlet } from 'react-router-dom';
 
 const DefaultLayout = ({ children }) => {
   return (

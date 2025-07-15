@@ -1,6 +1,7 @@
 import InfoBlock from '../molecules/InfoBlock';
 import { motion } from 'framer-motion';
 import { slideIn } from '../../utility/animation';
+// InfoBar: Componente molécula que muestra una barra de información con tres bloques informativos.
 
 const InfoBar = () => (
     <motion.section className="bg-gray-100 py-6 px-4 my-6"

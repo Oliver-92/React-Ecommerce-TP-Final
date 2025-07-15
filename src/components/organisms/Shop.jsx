@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import ShopProductCard from "../organisms/cards/ShopProductCard";
 import LoadingSpinner from "../atoms/LoadingSpinner";
 import { useSearch } from "../../contexts/SearchContext";
+// Shop: Organismo que muestra el listado de productos en la tienda.
 
 const Shop = () => {
     const { products, fetchProducts } = useProductsContext();
@@ -16,7 +17,7 @@ const Shop = () => {
         const loadProducts = async () => {
             try {
                 await fetchProducts();
-            } catch (err) {
+            } catch (error) {
                 setError('Hubo un problema al cargar los productos.');
             } finally {
                 setLoad(false);

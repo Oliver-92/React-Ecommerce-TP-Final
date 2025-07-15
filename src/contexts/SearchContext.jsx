@@ -1,4 +1,5 @@
 import { createContext, useState, useContext } from "react";
+// SearchContext: contexto de React que se utiliza para gestionar la busqueda de productos en la aplicación.
 
 const SearchContext = createContext();
 

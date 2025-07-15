@@ -4,6 +4,7 @@ import Button from "../atoms/Button";
 import { useState } from "react";
 import { useProductsContext } from "../../contexts/ProductsContext";
 import AddProductModal from "../organisms/AddProductModal";
+// Admin: Página de administración para agregar, editar y eliminar productos.
 
 const Admin = () => {
     const [showModal, setShowModal] = useState(false);
@@ -13,8 +14,8 @@ const Admin = () => {
         try {
             await addProduct(product);
             triggerRefresh();
-            setShowModal(false); 
-    
+            setShowModal(false);
+
         } catch (error) {
             console.error("Error al agregar producto:", error);
         }
@@ -23,7 +24,8 @@ const Admin = () => {
     return (
         <DefaultLayout>
             <h1 className="text-base lg:text-2xl text-center font-bold m-4">Panel de Administración</h1>
-            <Button textButton="Agregar Producto"
+            <Button
+                textButton="Agregar Producto"
                 onClick={() => setShowModal(true)}
                 className="bg-blue-500 text-white text-xs lg:text-base px-4 py-2 cursor-pointer hover:bg-blue-600 mb-4 mx-auto block rounded-2xl font-mono "
             />

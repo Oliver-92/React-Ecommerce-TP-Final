@@ -1,5 +1,6 @@
 import InfoIcon from '../atoms/InfoIcon';
 import InfoText from '../atoms/InfoText';
+// InfoBlock: Componente molécula que muestra un bloque informativo con ícono y texto.
 
 const InfoBlock = ({ icon, title, description }) => (
   <div className="flex items-center gap-3">

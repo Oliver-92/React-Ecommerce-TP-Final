@@ -1,3 +1,4 @@
+// InputField: Componente atómico para campos de entrada de formularios con etiqueta.
 const InputField = ({ label, type, value, onChange, name }) => (
   <label className="flex flex-col gap-1 text-sm">
     {label}

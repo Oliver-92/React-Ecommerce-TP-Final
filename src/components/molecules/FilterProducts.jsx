@@ -1,6 +1,7 @@
 import { useSearch } from "../../contexts/SearchContext";
 
 const filteredProducts = () => {
+// FilterProducts: Componente molécula para filtrar productos por precio y categoría.
     const { order, setOrder, category, setCategory } = useSearch();
 
     return (

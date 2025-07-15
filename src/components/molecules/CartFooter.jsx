@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useCart } from "../../contexts/CartContext";
 import Button from "../atoms/Button";
 import { SweetConfirm } from "../../utility/sweetAlert";
+// CartFooter: Componente molécula que muestra el resumen y acciones del carrito de compras.
 
 const CartFooter = ({ onCheckout }) => {
     const { getTotalItems, getTotalPrice, emptyCart } = useCart();
@@ -36,7 +37,6 @@ const CartFooter = ({ onCheckout }) => {
                     className="span-1 bg-red-500 text-white text-xs md:text-base h-full cursor-pointer hover:bg-red-600 px-4 py-2 rounded-lg"
                     onClick={handleEmptyCart}
                 />
-
                 <Button
                     textButton="Seguir comprando"
                     className="span-2 bg-gray-950 text-white text-xs md:text-base h-full cursor-pointer hover:bg-gray-800 px-4 py-2 rounded-lg"

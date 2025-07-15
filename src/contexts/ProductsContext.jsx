@@ -1,4 +1,5 @@
 import { createContext, useState, useContext } from 'react';
+// ProductsContext: contexto que se utiliza para gestionar la lista de productos de la aplicación.
 
 const ProductsContext = createContext();
 

@@ -4,8 +4,10 @@ import { useNavigate } from 'react-router-dom';
 import { sweetTimer } from '../../../utility/sweetAlert';
 import { useCart } from '../../../contexts/CartContext';
 import SocialIcon from '../../atoms/SocialIcon';
+// CartProductCard: Organismo que muestra la tarjeta de un producto dentro del carrito de compras.
 
 const CartProductCard = ({ product }) => {
+
     const { deleteProductFromCart, updateCart } = useCart();
     const { name, image, price, quantity } = product;
     const [currentQuantity, setQuantity] = useState(quantity);
@@ -15,7 +17,6 @@ const CartProductCard = ({ product }) => {
         iconClass="bi bi-trash"
     />
 
-
     function addQuantity() {
         setQuantity(prevQuantity => prevQuantity + 1);
         const updatedProduct = { ...product, quantity: currentQuantity + 1 };
@@ -23,23 +24,16 @@ const CartProductCard = ({ product }) => {
     }
 
     function subtractQuantity() {
-        // Evita que la cantidad sea menor a 1
         if (currentQuantity <= 1) return;
         setQuantity(prevQuantity => prevQuantity > 1 ? prevQuantity - 1 : 1);
         const updatedProduct = { ...product, quantity: currentQuantity - 1 };
         updateCart(updatedProduct);
     };
 
-    const handleClick = () => {
-        navigate(`/productos/${product.id}`);
-    };
-
-
     function handleDeleteProductCart() {
         deleteProductFromCart(product.id);
         sweetTimer("Producto eliminado del carrito");
     }
-
 
     return (
         <div className="flex flex-row justify-between items-center max-w-[750px] bg-white border border-gray-200 rounded-xl shadow-md p-1 m-1 md:mx-auto">
@@ -55,7 +49,9 @@ const CartProductCard = ({ product }) => {
                     -
                 </button>
                 <span className="mx-0 sm:mx-3">{currentQuantity}</span>
-                <button className="w-6 sm:w-8 h-6 sm:h-8 flex items-center justify-center ml-1 sm:ml-2 cursor-pointer" onClick={addQuantity}>+</button>
+                <button className="w-6 sm:w-8 h-6 sm:h-8 flex items-center justify-center ml-1 sm:ml-2 cursor-pointer" onClick={addQuantity}>
+                    +
+                </button>
             </div>
             <div>
                 <Button

@@ -1,10 +1,9 @@
 import { createContext, useState, useEffect } from 'react';
 import { useContext } from 'react';
+// El CartContext es un contexto de React que se utiliza para gestionar el carrito de compras de la aplicación.
 
-// Create the CartContext
 export const CartContext = createContext();
 
-// Cart provider
 export function CartProvider({ children }) {
     const [productsCart, setProductsCart] = useState(() => {
         const stored = localStorage.getItem("cart");

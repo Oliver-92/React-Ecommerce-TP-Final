@@ -1,4 +1,5 @@
 import { useSearch } from "../../contexts/SearchContext"
+// SearchProduct: Componente molécula para el input de búsqueda de productos.
 
 const SearchProduct = () => {
     const { search, setSearch } = useSearch();

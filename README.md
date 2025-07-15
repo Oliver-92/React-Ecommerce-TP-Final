@@ -1,4 +1,4 @@
-# MiTienda - E-commerce con React + Vite
+# E-commerce con React + Vite
 
 Este proyecto es una tienda online desarrollada con React, Vite y TailwindCSS. La arquitectura está basada en **Atomic Design**, lo que permite una organización escalable y reutilizable de los componentes en átomos, moléculas, organismos, páginas y templates. Permite a los usuarios navegar productos, agregarlos al carrito, realizar compras y gestionar la autenticación (incluyendo Google). Incluye un panel de administración para CRUD de productos.
 

@@ -1,5 +1,5 @@
 import InputField from "../atoms/InputField";
-
+// AuthForm: Componente molécula que muestra un formulario de autenticación.
 const AuthForm = ({ email, password, onChange, onSubmit, button }) => (
   <form onSubmit={onSubmit} className="flex flex-col gap-4 w-full max-w-sm">
     <InputField

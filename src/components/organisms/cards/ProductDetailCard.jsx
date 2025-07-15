@@ -1,3 +1,4 @@
+// ProductDetailCard: Organismo que muestra la tarjeta con el detalle completo de un producto.
 import { useState } from 'react';
 import Button from '../../atoms/Button';
 import { useCart } from '../../../contexts/CartContext';
@@ -54,9 +55,16 @@ const ProductDetailCard = ({ product }) => {
                     </select>
                 </div>
                 <div className="flex items-center justify-center mt-auto">
-                    <button className="bg-gray-950 text-white cursor-pointer w-8 h-8 flex items-center justify-center rounded-full p-2 mr-2 hover:bg-gray-800" onClick={subtractQuantity}>-</button>
+                    <button
+                        className="bg-gray-950 text-white cursor-pointer w-8 h-8 flex items-center justify-center rounded-full p-2 mr-2 hover:bg-gray-800"
+                        onClick={subtractQuantity}>
+                        -
+                    </button>
                     <span className="text-lg font-semibold mx-2">{quantity}</span>
-                    <button className="bg-gray-950 text-white cursor-pointer w-8 h-8 flex items-center justify-center rounded-full p-2 ml-2 hover:bg-gray-800" onClick={addQuantity}>+</button>
+                    <button className="bg-gray-950 text-white cursor-pointer w-8 h-8 flex items-center justify-center rounded-full p-2 ml-2 hover:bg-gray-800"
+                        onClick={addQuantity}>
+                        +
+                    </button>
                 </div>
                 <div className="flex items-center justify-center mt-4 gap-3 text-sm font-sans">
                     <Button

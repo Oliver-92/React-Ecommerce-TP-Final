@@ -1,3 +1,5 @@
+// slideIn: Función para animaciones de entrada con Framer Motion.
+
 export const slideIn = (direction = "up", delay = 0.3, duration = 1) => {
   const initial = { opacity: 0 };
   const animate = { opacity: 1, transition: { delay, duration } };

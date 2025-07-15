@@ -1,3 +1,4 @@
+// FeaturedProducts: Organismo que muestra el carrusel de productos destacados en la home.
 import { useProductsContext } from "../../contexts/ProductsContext";
 import Button from "../atoms/Button";
 import { Swiper, SwiperSlide } from "swiper/react";

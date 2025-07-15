@@ -1,6 +1,7 @@
 import SocialIcon from "../atoms/SocialIcon";
 
 const SocialIconsGroup = () => (
+// SocialIconsGroup: Componente molécula que agrupa y muestra los íconos de redes sociales.
     <div className="flex flex-col gap-2">
         <h2 className="text-gray-800 mb-1 text-base sm:text-lg md:text-xl font-semibold">Redes Sociales</h2>
         <div className="flex gap-2">

@@ -1,4 +1,5 @@
 import Swal from 'sweetalert2'
+// SweetBasic: Función que muestra un SweetAlert con un título, texto y botón personalizado.
 
 export function SweetBasic(title, text, icon, textButton) {
   console.log("🔥 SweetBasic llamado con:", { title, text, icon, textButton });

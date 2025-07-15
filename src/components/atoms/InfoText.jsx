@@ -1,3 +1,4 @@
+// InfoText: Componente atómico para mostrar textos informativos con título y descripción.
 const InfoText = ({ title, description }) => (
   <div>
     <h3 className="font-semibold">{title}</h3>

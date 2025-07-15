@@ -1,3 +1,4 @@
+// HeroTextGroup: Componente molécula que agrupa el título y subtítulo animados de la sección hero.
 import HeroHeading from "../atoms/HeroHeading";
 import HeroSubText from "../atoms/HeroSubText";
 

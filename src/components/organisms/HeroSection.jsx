@@ -2,6 +2,7 @@ import { useState } from "react";
 import HeroTextGroup from "../molecules/HeroTextGroup";
 
 const HeroSection = () => {
+// HeroSection: Organismo que muestra el banner principal con imagen y textos animados.
   const [imageLoaded, setImageLoaded] = useState(false);
 
   return (

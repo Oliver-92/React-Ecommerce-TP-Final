@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom"
 import Button from "../atoms/Button"
 import PayModalForm from "../organisms/PayModalForm"
 import { useState } from "react"
+// Cart: Página del carrito de compras.
 
 const Cart = () => {
     const { user } = useAuth()
@@ -43,20 +44,20 @@ const Cart = () => {
                     </>
                 ) : (
                     <div className="flex flex-col justify-center items-center">
-                    <p className="text-gray-500 sm:text-xl md:text-3xl text-center mt-20">
-                        No hay productos en el carrito
-                    </p>
-                    <Button
-                    textButton="Ver Productos"
-                    className="bg-green-700 text-white text-xs md:text-lg text-center font-mono hover:bg-green-600 cursor-pointer px-4 py-2 mt-10 rounded-lg"
-                    onClick={handleClick} />
+                        <p className="text-gray-500 sm:text-xl md:text-3xl text-center mt-20">
+                            No hay productos en el carrito
+                        </p>
+                        <Button
+                            textButton="Ver Productos"
+                            className="bg-green-700 text-white text-xs md:text-lg text-center font-mono hover:bg-green-600 cursor-pointer px-4 py-2 mt-10 rounded-lg"
+                            onClick={handleClick} />
                     </div>
                 )}
             </div>
-             <PayModalForm
+            <PayModalForm
                 isOpen={showModal}
                 onClose={() => setShowModal(false)}
-                />
+            />
         </DefaultLayout>
     )
 }

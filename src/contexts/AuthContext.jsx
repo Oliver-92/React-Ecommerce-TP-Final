@@ -1,3 +1,5 @@
+// Contexto de autenticación para la aplicación.
+
 import { createContext, useContext, useEffect, useState } from "react";
 import {
   registerWithEmail,

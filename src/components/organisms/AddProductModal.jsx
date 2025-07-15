@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { SweetBasic } from "../../utility/sweetAlert";
+// AddProductModal: Organismo que muestra el formulario modal para agregar un nuevo producto.
 
 const AddProductModal = ({ isOpen, onClose, onSubmit }) => {
     const [form, setForm] = useState({

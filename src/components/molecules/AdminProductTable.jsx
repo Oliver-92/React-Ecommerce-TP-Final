@@ -3,6 +3,7 @@ import { useProductsContext } from "../../contexts/ProductsContext";
 import { SweetConfirm } from "../../utility/sweetAlert";
 import { useState } from "react";
 import ModalEditProduct from "../organisms/ModalEditProduct";
+// AdminProductTable: Componente molécula que muestra la tabla de productos para administración (CRUD).
 
 const AdminProductTable = ({ products }) => {
   const { deleteProduct, triggerRefresh } = useProductsContext();

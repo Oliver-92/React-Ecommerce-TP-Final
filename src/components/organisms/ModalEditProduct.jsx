@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useProductsContext } from "../../contexts/ProductsContext";
 import { SweetBasic } from "../../utility/sweetAlert";
+// ModalEditProduct: Organismo que muestra el formulario modal para editar un producto.
 
 const ModalEditProduct = ({ isOpen, onClose, productId, onProductUpdated }) => {
   const { fetchProductById, updateProduct } = useProductsContext();
@@ -59,14 +60,15 @@ const ModalEditProduct = ({ isOpen, onClose, productId, onProductUpdated }) => {
     }
   };
 
-
   if (!isOpen) return null;
 
   return (
     <div className="fixed inset-0 flex items-center justify-center backdrop-blur-xl z-50">
       <div className="bg-white p-6 rounded-xl border-1 border-gray-200 shadow-lg w-[90%] max-w-lg">
         <h2 className="text-xl font-bold mb-4">Editar Producto</h2>
-        <form onSubmit={handleSubmit} className="space-y-3">
+        <form
+          onSubmit={handleSubmit}
+          className="space-y-3">
           <input
             name="name"
             value={form.name}
@@ -99,10 +101,17 @@ const ModalEditProduct = ({ isOpen, onClose, productId, onProductUpdated }) => {
             placeholder="Stock"
             type="number"
             className="w-full border-1 border-gray-400 p-1 rounded-xl" />
-
           <div className="flex justify-end gap-2 pt-4">
-            <button type="button" onClick={onClose} className="bg-gray-300 px-4 py-2 rounded-2xl cursor-pointer hover:bg-gray-400">Cancelar</button>
-            <button type="submit" disabled={loading} className="bg-blue-600 text-white px-4 py-2 rounded-2xl cursor-pointer hover:bg-blue-700">
+            <button
+              type="button"
+              onClick={onClose}
+              className="bg-gray-300 px-4 py-2 rounded-2xl cursor-pointer hover:bg-gray-400">
+              Cancelar
+            </button>
+            <button
+              type="submit"
+              disabled={loading}
+              className="bg-blue-600 text-white px-4 py-2 rounded-2xl cursor-pointer hover:bg-blue-700">
               {loading ? "Guardando..." : "Guardar cambios"}
             </button>
           </div>

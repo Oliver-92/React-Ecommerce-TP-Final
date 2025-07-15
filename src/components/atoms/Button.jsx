@@ -1,4 +1,5 @@
 const Button = ({
+// Button: Componente atómico para renderizar botones reutilizables con estilos y eventos personalizados.
   onClick,
   type = "button",
   textButton,

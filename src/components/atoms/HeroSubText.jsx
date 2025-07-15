@@ -1,3 +1,4 @@
+// HeroSubText: Componente atómico que muestra el subtítulo animado en la sección hero, resaltando beneficios y promociones.
 import { motion } from 'framer-motion';
 import { slideIn } from '../../utility/animation';
 

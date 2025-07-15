@@ -1,3 +1,4 @@
+// SocialIcon: Componente atómico para mostrar íconos sociales con estilos y enlaces personalizados.
 const SocialIcon = ({
   href,
   iconClass,

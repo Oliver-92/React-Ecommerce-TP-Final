@@ -1,3 +1,4 @@
+// SearchInput: Componente atómico para el campo de búsqueda en la navegación o header.
 const SearchInput = () => {
   return (
     <input

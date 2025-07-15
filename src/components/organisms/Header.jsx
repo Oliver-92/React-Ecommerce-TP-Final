@@ -1,6 +1,6 @@
+// Header: Organismo que muestra la cabecera principal con logo y menú de navegación.
 import { useState } from 'react';
 import Logo from '../atoms/Logo';
-import SearchInput from '../atoms/SearchInput';
 import NavigationMenu from '../molecules/NavigationMenu';
 
 const Header = () => {
@@ -11,9 +11,8 @@ const Header = () => {
       <div className="flex items-center justify-between">
         <Logo />
 
-        {/* Desktop search + nav */}
+        {/* Desktop nav */}
         <div className="hidden sm:flex items-end flex-col gap-4 mt-0">
-          {/*<SearchInput />*/}
           <NavigationMenu />
         </div>
 
@@ -30,7 +29,6 @@ const Header = () => {
       {/* Mobile menu */}
       {mobileOpen && (
         <div className="sm:hidden mt-4">
-          {/*<SearchInput />*/}
           <NavigationMenu isMobile />
         </div>
       )}

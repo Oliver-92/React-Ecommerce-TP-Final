@@ -5,6 +5,7 @@ import { sweetTimer } from "../../utility/sweetAlert";
 import { useNavigate } from "react-router-dom";
 import Button from "../atoms/Button";
 import SocialIcon from "../atoms/SocialIcon";
+// LoginRegister: Organismo que muestra el formulario de inicio de sesión y registro.
 
 const LoginRegister = () => {
   const { login, register, loginGoogleAccount } = useAuth();
@@ -13,13 +14,13 @@ const LoginRegister = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
   const GoogleIcon = <SocialIcon
-      as="i"
-      iconClass="bi bi-google"
-      bgColor="bg-white"
-      textColor="text-[#3c4043]"
-      label="Google"
-      size="2"
-    />
+    as="i"
+    iconClass="bi bi-google"
+    bgColor="bg-white"
+    textColor="text-[#3c4043]"
+    label="Google"
+    size="2"
+  />
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -57,7 +58,7 @@ const LoginRegister = () => {
       console.error("Error:", err);
       console.log("Error completo:", JSON.stringify(err, null, 2));
 
-      const errorCode = err?.code || ""; // evitar undefined
+      const errorCode = err?.code || "";
 
       switch (errorCode) {
         case "auth/invalid-credential":
@@ -106,8 +107,12 @@ const LoginRegister = () => {
           onSubmit={handleSubmit}
           button={<Button type="submit" textButton={isRegister ? "Registrarse" : "Ingresar"} />}
         />
-        <Button className="flex justify-center items-center gap-2 w-full mt-4 bg-red-500 text-white py-2 rounded hover:bg-red-600" textButton="Ingresar con Google" icon={GoogleIcon} onClick={handleGoogleLogin} />
-        
+        <Button 
+        className="flex justify-center items-center gap-2 w-full mt-4 bg-red-500 text-white py-2 rounded hover:bg-red-600" 
+        textButton="Ingresar con Google" 
+        icon={GoogleIcon} 
+        onClick={handleGoogleLogin} />
+
         <p className="mt-4 text-sm text-center">
           {isRegister ? "¿Ya tenés cuenta?" : "¿No tenés cuenta?"} {" "}
           <button

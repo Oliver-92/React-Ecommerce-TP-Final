@@ -1,3 +1,4 @@
+// Footer: Organismo que muestra el pie de página con contacto, redes y formas de pago.
 import mastercard from "../../assets/mastercard.png";
 import visa from "../../assets/visa.png";
 import naranja from "../../assets/naranja.png";
@@ -11,7 +12,7 @@ const Footer = () => (
       <div className="flex flex-col gap-1 text-xs lg:text-sm 2xl:text-base text-gray-800">
         <h2 className="mb-1 text-base sm:text-lg md:text-xl font-semibold">Contacto</h2>
         <div><i className="bi bi-whatsapp"> 541122222222</i></div>
-        <div><i className="bi bi-envelope"> ejemplo@gmail.com</i></div>
+        <div><i className="bi bi-envelope"> nevermind-shop@gmail.com</i></div>
         <div><i className="bi bi-geo-alt"> Nuestros Locales</i></div>
         <div><i className="bi bi-question-circle"> Preguntas Frecuentes</i></div>
         <div><i className="bi bi-bag-x"> Arrepentimiento de compra</i></div>
@@ -34,7 +35,7 @@ const Footer = () => (
 
     {/* Footer final */}
     <div className="flex flex-col sm:flex-row justify-center gap-2 bg-gray-950 text-white text-center py-4">
-      <p className="text-xs md:text-sm">© 2025 MiTienda. Todos los derechos reservados.</p>
+      <p className="text-xs md:text-sm">© 2025 Nevermind-Shop. Todos los derechos reservados.</p>
       <p className="text-xs md:text-sm">Desarrollado por <a href="https://oliver-92.github.io/Portafolio/" className="font-semibold" target="_blank" rel="noopener noreferrer">Ezequiel Oliver</a></p>
     </div>
   </footer>

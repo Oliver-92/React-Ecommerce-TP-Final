@@ -1,3 +1,4 @@
+// ShopProductCard: Organismo que muestra la tarjeta individual de un producto en el listado de la tienda.
 import { useState } from 'react';
 import Button from '../../atoms/Button';
 import { useNavigate } from 'react-router-dom';
@@ -45,7 +46,9 @@ const ShopProductCard = ({ product }) => {
                     -
                 </button>
                 <span className="text-sm lg:text-lg font-semibold mx-1 sm:mx-2">{quantity}</span>
-                <button className="bg-gray-950 text-xs sm:text-base text-white cursor-pointer w-4 sm:w-6 lg:w-8 h-4 sm:h-6 lg:h-8 flex items-center justify-center rounded-full ml-1 sm:ml-2 hover:bg-gray-800" onClick={addQuantity}>+</button>
+                <button className="bg-gray-950 text-xs sm:text-base text-white cursor-pointer w-4 sm:w-6 lg:w-8 h-4 sm:h-6 lg:h-8 flex items-center justify-center rounded-full ml-1 sm:ml-2 hover:bg-gray-800" onClick={addQuantity}>
+                    +
+                </button>
             </div>
             <div className="flex items-center justify-center mt-2 sm:mt-4 gap-1 sm:gap-3 text-[10px] sm:text-xs lg:text-sm">
                 <Button

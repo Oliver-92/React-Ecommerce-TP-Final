@@ -2,6 +2,7 @@ import { useProductsContext } from "../../contexts/ProductsContext";
 import AdminProductTable from "../molecules/AdminProductTable";
 import { useEffect, useState } from "react";
 import LoadingSpinner from "../atoms/LoadingSpinner";
+// AdminProductTableView: Organismo que muestra la tabla de productos para administración (CRUD).
 
 const AdminProductTableView = () => {
 
@@ -33,9 +34,9 @@ const AdminProductTableView = () => {
         return <p className="text-gray-500 text-center">No hay productos disponibles.</p>;
     } else {
         return (
-                <>
-                    <AdminProductTable products={products} />
-                </>
+            <>
+                <AdminProductTable products={products} />
+            </>
         );
     }
 };

@@ -1,9 +1,12 @@
+// NavigationMenu: Componente molécula que renderiza el menú de navegación principal.
 import { useAuth } from '../../contexts/AuthContext';
 import NavLink from '../atoms/NavLink';
+import { useCart } from '../../contexts/CartContext';
 
 const NavigationMenu = ({ isMobile = false }) => {
-
   const { user, logoutUser, isAdmin } = useAuth();
+  const { productsCart } = useCart();
+  const hasItems = productsCart.length > 0;
 
   const handleLogout = () => {
     logoutUser();
@@ -14,7 +17,7 @@ const NavigationMenu = ({ isMobile = false }) => {
     { label: 'Productos', path: '/productos' },
     user ? { label: "Salir", action: handleLogout } :
       { label: 'Ingresar', path: '/login' },
-    { label: <i className="bi bi-cart text-white text-xs md:text-sm lg:text-base hover:text-cyan-400 transition-colors duration-200" title="Carrito"></i>, path: '/carrito' },
+    { label: <i className={`bi bi-cart ${hasItems ? "text-cyan-400 animate-pulse border-3 border-cyan-400 rounded-full px-2 py-1" : "text-white"} text-xs md:text-sm lg:text-base hover:text-cyan-400 transition-colors duration-200`} title="Carrito"></i>, path: '/carrito' },
   ];
 
   if (isAdmin) {

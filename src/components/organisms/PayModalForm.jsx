@@ -1,3 +1,4 @@
+// PayModalForm: Organismo que muestra el formulario modal para finalizar la compra y procesar el pago.
 import { useState } from "react";
 import { SweetBasic } from "../../utility/sweetAlert";
 import { useCart } from "../../contexts/CartContext";
